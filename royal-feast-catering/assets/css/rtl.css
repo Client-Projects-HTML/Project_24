@@ -1,0 +1,54 @@
+/* =========================================================
+   ROYAL FEAST — RTL Support
+   Activated via [dir="rtl"] on <html>, toggled in JS for
+   Arabic / Hebrew style layouts.
+   ========================================================= */
+
+html[dir="rtl"] body { font-family: var(--font-body); }
+
+html[dir="rtl"] .eyebrow::before { order: 2; }
+html[dir="rtl"] .eyebrow { flex-direction: row-reverse; justify-content: flex-end; }
+
+html[dir="rtl"] .nav-links a::after { left: auto; right: 0; }
+
+html[dir="rtl"] .hero-scrim { background: linear-gradient(245deg, rgba(30,10,8,0.92) 0%, rgba(30,10,8,0.72) 45%, rgba(30,10,8,0.38) 100%); }
+html[dir="rtl"] .hero-content { margin-left: auto; margin-right: 0; text-align: right; }
+html[dir="rtl"] .hero-stats { text-align: right; }
+
+html[dir="rtl"] .card-tag { left: auto; right: 14px; }
+html[dir="rtl"] .card-link svg,
+html[dir="rtl"] .card-link { flex-direction: row-reverse; }
+html[dir="rtl"] .card-link:hover svg { transform: translateX(-4px); }
+
+html[dir="rtl"] .split-media .badge-float { right: auto; left: -24px; }
+
+html[dir="rtl"] .check-list li,
+html[dir="rtl"] .footer-contact li,
+html[dir="rtl"] .dish-row,
+html[dir="rtl"] .accordion-trigger,
+html[dir="rtl"] .form-group label,
+html[dir="rtl"] .card-meta span,
+html[dir="rtl"] .pricing-card ul li,
+html[dir="rtl"] .testi-person { flex-direction: row-reverse; text-align: right; }
+
+html[dir="rtl"] .veg-dot { margin-right: 0; margin-left: 6px; }
+
+html[dir="rtl"] .timeline { padding-left: 0; padding-right: var(--space-7); }
+html[dir="rtl"] .timeline::before { left: auto; right: 9px; }
+html[dir="rtl"] .timeline-item::before { left: auto; right: -34px; }
+
+html[dir="rtl"] .lightbox-nav.prev { left: auto; right: var(--space-6); }
+html[dir="rtl"] .lightbox-nav.next { right: auto; left: var(--space-6); }
+html[dir="rtl"] .lightbox-close { right: auto; left: var(--space-6); }
+
+html[dir="rtl"] .back-to-top { right: auto; left: 28px; }
+
+html[dir="rtl"] .divider-icon { flex-direction: row-reverse; }
+
+html[dir="rtl"] .accordion-trigger svg { margin-left: 0; margin-right: var(--space-3); }
+
+html[dir="rtl"] .form-control { text-align: right; }
+
+@media (max-width: 640px) {
+  html[dir="rtl"] .back-to-top { left: 18px; right: auto; }
+}

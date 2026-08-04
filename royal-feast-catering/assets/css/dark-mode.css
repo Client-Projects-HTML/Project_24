@@ -1,0 +1,64 @@
+/* =========================================================
+   ROYAL FEAST — Dark Mode
+   Activated via [data-theme="dark"] on <html>, toggled in JS
+   and respecting prefers-color-scheme on first visit.
+   ========================================================= */
+
+html[data-theme="dark"] {
+  --bg: #17110d;
+  --surface: #1f1712;
+  --surface-2: #241b15;
+  --ink: #f3ece3;
+  --ink-soft: #c9bbaa;
+  --border: #372a20;
+
+  --primary: #d9534f;
+  --primary-600: #e2645f;
+  --primary-700: #c24541;
+  --primary-tint: #2c1815;
+
+  --secondary: #e5b23a;
+  --secondary-600: #f0c258;
+  --secondary-tint: #2e2510;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.35);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.45);
+  --shadow-lg: 0 20px 48px rgba(0,0,0,0.55);
+}
+
+html[data-theme="dark"] .site-header {
+  background: rgba(23, 17, 13, 0.86);
+  border-bottom-color: var(--border);
+}
+
+html[data-theme="dark"] .hero-scrim {
+  background: linear-gradient(115deg, rgba(10,6,4,0.94) 0%, rgba(10,6,4,0.78) 45%, rgba(10,6,4,0.42) 100%);
+}
+
+html[data-theme="dark"] .page-hero .hero-scrim {
+  background: linear-gradient(180deg, rgba(10,6,4,.92), rgba(10,6,4,.8));
+}
+
+html[data-theme="dark"] .btn-primary { color: #17110d; }
+html[data-theme="dark"] .btn-gold { color: #201804; }
+
+html[data-theme="dark"] .site-footer { background: #0f0b08; }
+
+html[data-theme="dark"] .split-media img,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .form-card { box-shadow: var(--shadow-md); }
+
+html[data-theme="dark"] .newsletter-form input { background: rgba(255,255,255,0.04); }
+
+html[data-theme="dark"] .badge-veg { background: #16261c; }
+html[data-theme="dark"] .badge-nonveg { background: #2a1613; }
+html[data-theme="dark"] .badge-gold { background: var(--secondary-tint); }
+
+html[data-theme="dark"] .skeleton { background: var(--surface-2); }
+html[data-theme="dark"] .skeleton::after {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+}
+
+html[data-theme="dark"] .lightbox { background: rgba(0,0,0,0.97); }
+
+html[data-theme="dark"] .state-page .code { -webkit-text-stroke-color: var(--primary); color: var(--primary-tint); }

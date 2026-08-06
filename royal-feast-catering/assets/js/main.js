@@ -218,6 +218,32 @@
     });
   }
 
+  // ---------- Admin Enquiries Table Status Filter ----------
+document.addEventListener("DOMContentLoaded", function () {
+  const statusFilter = document.getElementById("statusFilter");
+  const tableRows = document.querySelectorAll(".admin-table tbody tr");
+
+  if (!statusFilter || !tableRows.length) return;
+
+  statusFilter.addEventListener("change", function () {
+    const selectedValue = this.value.toLowerCase().trim();
+
+    tableRows.forEach(function (row) {
+      const statusPill = row.querySelector(".status-pill");
+      if (!statusPill) return;
+
+      const rowStatus = statusPill.textContent.toLowerCase().trim();
+
+      if (selectedValue === "all" || rowStatus === selectedValue) {
+        row.style.display = "";
+      } else {
+        row.style.display = "none";
+      }
+    });
+  });
+});
+
+
   /* ---------- Admin sidebar toggle (mobile) ---------- */
   function initAdminSidebar() {
     var toggle = document.querySelector(".admin-hamburger");

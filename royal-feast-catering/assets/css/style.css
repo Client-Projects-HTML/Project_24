@@ -164,7 +164,7 @@ p { margin: 0 0 var(--space-4); color: var(--ink-soft); }
   transition: box-shadow .2s ease;
 }
 .site-header.is-scrolled { box-shadow: var(--shadow-sm); }
-.site-header .container { display: flex; align-items: center; justify-content: space-between; gap: var(--space-5); }
+.site-header .container { display: flex; align-items: center; justify-content: space-between; gap: var(--space-5); width: 100%; }
 
 .brand { 
   display: flex; 
@@ -185,16 +185,7 @@ p { margin: 0 0 var(--space-4); color: var(--ink-soft); }
 .brand-mark svg { width: 22px; height: 22px; }
 .brand span em { font-style: normal; color: var(--primary); }
 
-.nav-links { 
-  display: flex; 
-  align-items: center; 
-  gap: var(--space-6);
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 220px;
-  padding-right: 20px; 
-  
-}
+/* Nav Links - Responsive Desktop vs Mobile */
 .nav-links a {
   font-size: 0.94rem; font-weight: 500; color: var(--ink-soft);
   position: relative; padding: 6px 0;
@@ -205,6 +196,14 @@ p { margin: 0 0 var(--space-4); color: var(--ink-soft); }
 }
 .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--primary); }
 .nav-links a:hover::after, .nav-links a[aria-current="page"]::after { width: 100%; }
+
+@media (min-width: 960px) {
+  .nav-links { 
+    display: flex; 
+    align-items: center; 
+    gap: var(--space-6);
+  }
+}
 
 .header-actions { display: flex; align-items: center; gap: var(--space-3); }
 .icon-btn {
@@ -224,13 +223,22 @@ p { margin: 0 0 var(--space-4); color: var(--ink-soft); }
 }
 .hamburger svg { width: 22px; height: 22px; }
 
-.mobile-nav {
-  display: none; position: fixed; inset: var(--header-h) 0 0 0; z-index: 999;
-  background: var(--bg); overflow-y: auto; padding: var(--space-6) var(--space-5);
+/* Mobile Navigation Drawer */
+@media (max-width: 959px) {
+  .nav-links { display: none; }
+  .hamburger { display: inline-flex; }
+
+  .mobile-nav {
+    display: none; position: fixed; 
+    top: var(--header-h); left: 0; right: 0; bottom: 0;
+    z-index: 999; background: var(--bg); overflow-y: auto; 
+    padding: var(--space-6) var(--space-5);
+  }
+  .mobile-nav.is-open { display: block; }
+  .mobile-nav a { display: block; padding: 14px 0; font-size: 1.1rem; font-weight: 500; border-bottom: 1px solid var(--border); color: var(--ink); }
+  .mobile-nav .btn { margin-top: var(--space-5); }
 }
-.mobile-nav.is-open { display: block; }
-.mobile-nav a { display: block; padding: 14px 0; font-size: 1.1rem; font-weight: 500; border-bottom: 1px solid var(--border); color: var(--ink); }
-.mobile-nav .btn { margin-top: var(--space-5); }
+
 /* ============ Dedicated Login Page Styles ============ */
 .login-container {
   min-height: 100vh;
@@ -242,7 +250,7 @@ p { margin: 0 0 var(--space-4); color: var(--ink-soft); }
 }
 
 .login-card {
-  position: relative; /* Anchors absolute children inside the card */
+  position: relative;
   width: 100%;
   max-width: 420px;
   background-color: var(--surface);
@@ -253,7 +261,6 @@ p { margin: 0 0 var(--space-4); color: var(--ink-soft); }
   text-align: center;
 }
 
-/* Page controls in card corner */
 .login-card .page-controls {
   position: absolute;
   top: 1rem;
@@ -303,6 +310,10 @@ p { margin: 0 0 var(--space-4); color: var(--ink-soft); }
 .admin-redirect a {
   color: var(--primary);
   font-weight: 600;
+}
+/* Base Mobile Nav Rule (Hides it by default everywhere) */
+.mobile-nav {
+  display: none;
 }
 
 /* ============ Hero ============ */
@@ -374,7 +385,7 @@ p { margin: 0 0 var(--space-4); color: var(--ink-soft); }
 .grid-4 { grid-template-columns: repeat(4, 1fr); }
 .grid-6 { grid-template-columns: repeat(6, 1fr); }
 
-/* ============ Icon feature blocks ============ */
+/* ============ Icon Feature Blocks ============ */
 .icon-tile {
   width: 58px; height: 58px; border-radius: var(--radius-md);
   background: var(--primary-tint); color: var(--primary);
@@ -385,7 +396,7 @@ p { margin: 0 0 var(--space-4); color: var(--ink-soft); }
 .feature h3 { font-size: 1.08rem; }
 .feature p { font-size: 0.92rem; margin-bottom: 0; }
 
-/* ============ About preview / split ============ */
+/* ============ About Preview / Split ============ */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: center; }
 .split-media { position: relative; }
 .split-media img { border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); }
@@ -400,7 +411,7 @@ p { margin: 0 0 var(--space-4); color: var(--ink-soft); }
 .check-list li { display: flex; gap: 10px; margin-bottom: var(--space-3); align-items: flex-start; }
 .check-list svg { width: 20px; height: 20px; color: var(--status-good); flex-shrink: 0; margin-top: 2px; }
 
-/* ============ Menu tabs ============ */
+/* ============ Menu Tabs ============ */
 .tabs-nav { display: flex; flex-wrap: wrap; gap: var(--space-2); justify-content: center; margin-bottom: var(--space-7); }
 .tab-btn {
   padding: 10px 20px; border-radius: var(--radius-pill); border: 1.5px solid var(--border);
@@ -460,7 +471,7 @@ p { margin: 0 0 var(--space-4); color: var(--ink-soft); }
 .testi-person .name { font-weight: 600; font-size: 0.94rem; color: var(--ink); }
 .testi-person .role { font-size: 0.8rem; color: var(--ink-soft); }
 
-/* ============ Stat strip / CTA band ============ */
+/* ============ Stat Strip / CTA Band ============ */
 .stat-strip { background: var(--primary); color: #fff; border-radius: var(--radius-lg); padding: var(--space-7) var(--space-6); }
 .stat-strip .grid { text-align: center; }
 .stat-strip .stat-num { font-family: var(--font-display); font-size: 2.4rem; color: var(--secondary); }
@@ -559,7 +570,7 @@ fieldset legend { font-family: var(--font-display); font-size: 1.1rem; padding: 
 /* ============ Blog ============ */
 .blog-card .card-body .date { font-size: 0.78rem; color: var(--secondary-600); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; margin-bottom: var(--space-2); }
 
-/* ============ Skeleton loaders ============ */
+/* ============ Skeleton Loaders ============ */
 .skeleton { position: relative; overflow: hidden; background: var(--surface-2); border-radius: var(--radius-sm); }
 .skeleton::after {
   content: ""; position: absolute; inset: 0; transform: translateX(-100%);
@@ -602,7 +613,7 @@ fieldset legend { font-family: var(--font-display); font-size: 1.1rem; padding: 
 .footer-bottom a { color: rgba(255,255,255,0.5); }
 .footer-bottom a:hover { color: var(--secondary); }
 
-/* ============ Back to top ============ */
+/* ============ Back to Top ============ */
 .back-to-top {
   position: fixed; bottom: 28px; right: 28px; z-index: 900;
   width: 48px; height: 48px; border-radius: 50%; background: var(--primary); color: #fff;
@@ -612,7 +623,7 @@ fieldset legend { font-family: var(--font-display); font-size: 1.1rem; padding: 
 .back-to-top.is-shown { opacity: 1; visibility: visible; transform: translateY(0); }
 .back-to-top svg { width: 20px; height: 20px; }
 
-/* ============ 404 / coming soon ============ */
+/* ============ 404 / Coming Soon ============ */
 .state-page { min-height: 82vh; display: flex; align-items: center; text-align: center; }
 .state-page .code { font-family: var(--font-display); font-size: clamp(5rem, 16vw, 9rem); color: var(--primary-tint); line-height: 1; -webkit-text-stroke: 2px var(--primary); }
 .countdown { display: flex; gap: var(--space-4); justify-content: center; margin: var(--space-7) 0; flex-wrap: wrap; }
@@ -642,7 +653,7 @@ fieldset legend { font-family: var(--font-display); font-size: 1.1rem; padding: 
   [data-animate] { opacity: 1; transform: none; }
 }
 
-/* ============ Nav dropdown (Home 1/Home 2) ============ */
+/* ============ Nav Dropdown (Home 1/Home 2) ============ */
 .nav-dropdown { position: relative; }
 .nav-dropdown > a { display: inline-flex; align-items: center; gap: 4px; }
 .dropdown-panel {

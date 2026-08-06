@@ -1,13 +1,41 @@
 /* =========================================================
    ROYAL FEAST — enquiry.js
    Extra behaviour for the Get a Quote / Enquiry form:
-   guest-count live label, min event date, budget display.
-   Field-level validation itself is handled by main.js.
+   guest-count live label, min event date, budget display,
+   and Admin Enquiry status filtering.
    ========================================================= */
 (function () {
   "use strict";
 
   document.addEventListener("DOMContentLoaded", function () {
+    /* -----------------------------------------------------
+       1. Table Status Filter (Admin Portal)
+       ----------------------------------------------------- */
+    var statusFilter = document.getElementById("statusFilter");
+    var tableRows = document.querySelectorAll(".admin-table tbody tr");
+
+    if (statusFilter && tableRows.length > 0) {
+      statusFilter.addEventListener("change", function () {
+        var selectedValue = this.value.toLowerCase().trim();
+
+        tableRows.forEach(function (row) {
+          var statusPill = row.querySelector(".status-pill");
+          if (!statusPill) return;
+
+          var rowStatus = statusPill.textContent.toLowerCase().trim();
+
+          if (selectedValue === "all" || rowStatus === selectedValue) {
+            row.style.display = "";
+          } else {
+            row.style.display = "none";
+          }
+        });
+      });
+    }
+
+    /* -----------------------------------------------------
+       2. Quote Form Handlers
+       ----------------------------------------------------- */
     var form = document.querySelector("#enquiry-form");
     if (!form) return;
 

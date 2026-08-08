@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Royal Feast</title>
+  <title>Sign Up - Royal Feast</title>
   
   <!-- Make sure this path matches your CSS file name -->
      <link rel="stylesheet" href="assets/css/style.css">
@@ -40,11 +40,16 @@
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 8L22 9L17 14L18.5 21L12 17.5L5.5 21L7 14L2 9L9 8L12 2Z"/></svg>
     </div>
     
-    <h2 style="margin-bottom: 4px;">Welcome Back</h2>
-    <p class="subtitle" style="margin-bottom: 1rem;">Please enter your details to sign in.</p>
+    <h2 style="margin-bottom: 4px;">Create an Account</h2>
+    <p class="subtitle" style="margin-bottom: 1rem;">Please enter your details to get started.</p>
 
     <!-- Form -->
     <form class="login-form">
+      <div class="form-group">
+        <label for="name">Full Name <span class="req">*</span></label>
+        <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+      </div>
+
       <div class="form-group">
         <label for="email">Email Address <span class="req">*</span></label>
         <input type="email" id="email" class="form-control" placeholder="name@example.com" required>
@@ -60,15 +65,7 @@
         </div>
       </div>
 
-      <div class="form-options" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; font-size: 0.85rem;">
-        <label class="remember-me" style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
-          <input type="checkbox" id="remember">
-          <span>Remember Me</span>
-        </label>
-        <a href="#" class="forgot-link" style="color: var(--primary); text-decoration: none; font-weight: 500;">Forgot Password?</a>
-      </div>
-
-      <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+      <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
       
       <div class="divider" style="display: flex; align-items: center; text-align: center; margin: 1rem 0; color: var(--ink-light); font-size: 0.85rem;">
         <span style="flex: 1; border-bottom: 1px solid var(--border-color);"></span>
@@ -88,7 +85,7 @@
       </div>
 
       <div class="signup-redirect" style="text-align: center; margin-top: 1rem; font-size: 0.85rem;">
-        Don't have an account? <a href="signup.html" style="color: var(--primary); font-weight: 500;">Sign up</a>
+        Already have an account? <a href="login.html" style="color: var(--primary); font-weight: 500;">Sign In</a>
       </div>
     </form>
 

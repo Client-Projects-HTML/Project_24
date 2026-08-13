@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../assets/css/rtl.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%237a1010'/%3E%3Ctext x='50' y='66' font-size='55' text-anchor='middle' fill='%23b8860b' font-family='Georgia'%3ER%3C/text%3E%3C/svg%3E">
 </head>
-<body>
+<body class="admin-body">
   <div class="admin-body">
   <aside class="admin-sidebar">
     <div>
@@ -40,10 +40,6 @@
       <header class="admin-topbar">
         <div style="display:flex;align-items:center;gap:14px;">
           <button class="hamburger admin-hamburger" aria-label="Open admin menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-          <div>
-            <h1>Customers</h1>
-            <span class="subtitle">A record of everyone who has booked or enquired with Royal Feast.</span>
-          </div>
         </div>
         <div class="admin-topbar-actions">
           <button class="icon-btn" data-dir-toggle aria-pressed="false" aria-label="Switch to right-to-left layout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 6 4 9s-1.5 6.4-4 9c-2.5-2.6-4-6-4-9s1.5-6.4 4-9z"/></svg></button>
@@ -53,6 +49,11 @@
         </div>
       </header>
       <main class="admin-content">
+
+        <div class="admin-page-header" style="margin-bottom:20px;">
+          <h1 style="font-size:1.6rem;font-weight:700;margin-bottom:4px;">Customers</h1>
+          <span class="subtitle" style="color:var(--ink-soft);font-size:0.9rem;">A record of everyone who has booked or enquired with Royal Feast.</span>
+        </div>
 
         <div class="admin-panel">
           <div class="admin-panel-head"><h3>Customers</h3></div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Not Found | Royal Feast Catering</title>
   <meta name="description" content="The page you're looking for could not be found. Return to the Royal Feast Catering homepage.">
@@ -18,12 +18,22 @@
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="assets/css/dark-mode.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
-  
 </head>
 <body>
 
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></span>
+        <span>Royal <em>Feast</em></span>
+      </a>
 
-<!-- MOBILE NAV DRAWER (MUST BE MOVED OUTSIDE <header>) -->
+      <div class="header-actions">
+        <button class="icon-btn" data-dir-toggle aria-pressed="false" aria-label="Switch to right-to-left layout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 6 4 9s-1.5 6.4-4 9c-2.5-2.6-4-6-4-9s1.5-6.4 4-9z"/></svg></button>
+        <button class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg></button>
+      </div>
+    </div>
+  </header>
 
   <section class="state-page">
     <div class="container text-center">
@@ -36,7 +46,6 @@
       </div>
     </div>
   </section>
-
 
   <script src="assets/js/main.js"></script>
 

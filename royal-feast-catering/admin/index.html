@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../assets/css/rtl.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%237a1010'/%3E%3Ctext x='50' y='66' font-size='55' text-anchor='middle' fill='%23b8860b' font-family='Georgia'%3ER%3C/text%3E%3C/svg%3E">
 </head>
-<body>
+<body class="admin-body">
   <div class="admin-body">
   <aside class="admin-sidebar">
     <div>
@@ -38,21 +38,26 @@
   </aside>
     <div class="admin-main">
       <header class="admin-topbar">
-        <div style="display:flex;align-items:center;gap:14px;">
-          <button class="hamburger admin-hamburger" aria-label="Open admin menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-          <div>
-            <h1>Welcome back, Admin</h1>
-            <span class="subtitle">Here's what's happening with Royal Feast today.</span>
-          </div>
+        <div class="admin-topbar-brand">
+          <a href="../index.html" class="brand" style="font-size:1.15rem;padding:0;">
+            <span class="brand-mark" style="width:32px;height:32px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></span>
+            <span>Royal <em>Feast</em></span>
+          </a>
         </div>
         <div class="admin-topbar-actions">
           <button class="icon-btn" data-dir-toggle aria-pressed="false" aria-label="Switch to right-to-left layout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 6 4 9s-1.5 6.4-4 9c-2.5-2.6-4-6-4-9s1.5-6.4 4-9z"/></svg></button>
           <button class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg></button>
           <button class="icon-btn" aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 10a6 6 0 0 1 12 0c0 4 1.5 5.5 1.5 5.5H4.5S6 14 6 10z"/><path d="M10 19a2 2 0 0 0 4 0"/></svg></button>
           <div class="admin-avatar">A</div>
+          <button class="hamburger admin-hamburger" aria-label="Open admin menu" style="margin-left:2px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
         </div>
       </header>
       <main class="admin-content">
+
+        <div class="admin-page-header" style="margin-bottom:20px;">
+          <h1 style="font-size:1.6rem;font-weight:700;margin-bottom:4px;">Welcome back, Admin</h1>
+          <span class="subtitle" style="color:var(--ink-soft);font-size:0.9rem;">Here's what's happening with Royal Feast today.</span>
+        </div>
 
         <div class="grid grid-4" style="margin-bottom:24px;">
           <div class="kpi-card">

@@ -29,7 +29,7 @@
       </a>
             <nav class="nav-links" aria-label="Primary">
           <div class="nav-dropdown">
-              <a href="index.html" data-nav-link>Home</a>
+              <a href="index.html" data-nav-link>Home <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dropdown-icon" style="width:13px;height:13px;transition:transform .2s ease;"><path d="M6 9l6 6 6-6"/></svg></a>
               <div class="dropdown-panel">
                 <a href="index.html">Home &mdash; Classic</a>
                 <a href="home-2.html">Home &mdash; Premium</a>
@@ -60,8 +60,16 @@
 
 <!-- MOBILE NAV DRAWER (MUST BE MOVED OUTSIDE <header>) -->
 <div class="mobile-nav">
-  <a href="index.html">Home &mdash; Classic</a>
-  <a href="home-2.html">Home &mdash; Premium</a>
+  <div class="mobile-nav-group">
+    <button type="button" class="mobile-dropdown-header" aria-expanded="true">
+      <span>Home</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;transition:transform .2s ease;"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <div class="mobile-dropdown-links">
+      <a href="index.html">Home &mdash; Classic</a>
+      <a href="home-2.html">Home &mdash; Premium</a>
+    </div>
+  </div>
   <a href="about.html">About</a>
   <a href="services.html">Services</a>
   <a href="menu.html">Menu</a>
@@ -122,29 +130,29 @@
         <p>Specialists across regional Indian, Chinese and continental cuisine, each with 10+ years of banquet experience.</p>
       </div>
       <div class="grid grid-4">
-        <div class="card" data-animate>
-          <div class="card-media"><img src="https://placehold.co/400x460/f5efe2/7a1010?text=Chef+A&font=poppins" alt="Portrait of Chef Anand Verma, Founder & Executive Chef"></div>
+        <div class="card chef-card" data-animate>
+          <div class="card-media"><img src="assets/images/chefs/chef-anand-verma.jpg" alt="Portrait of Chef Anand Verma, Founder & Executive Chef"></div>
           <div class="card-body">
             <h3>Chef Anand Verma</h3>
             <p style="margin-bottom:0;color:var(--primary);font-weight:600;font-size:0.88rem;">Founder & Executive Chef</p>
           </div>
         </div>
-        <div class="card" data-animate>
-          <div class="card-media"><img src="https://placehold.co/400x460/f5efe2/7a1010?text=Chef+L&font=poppins" alt="Portrait of Chef Lakshmi Nair, Head of South Indian Cuisine"></div>
+        <div class="card chef-card" data-animate>
+          <div class="card-media"><img src="assets/images/chefs/chef-lakshmi-nair.jpg" alt="Portrait of Chef Lakshmi Nair, Head of South Indian Cuisine"></div>
           <div class="card-body">
             <h3>Chef Lakshmi Nair</h3>
             <p style="margin-bottom:0;color:var(--primary);font-weight:600;font-size:0.88rem;">Head of South Indian Cuisine</p>
           </div>
         </div>
-        <div class="card" data-animate>
-          <div class="card-media"><img src="https://placehold.co/400x460/f5efe2/7a1010?text=Chef+M&font=poppins" alt="Portrait of Chef Marco D'Souza, Continental & Live Counters"></div>
+        <div class="card chef-card" data-animate>
+          <div class="card-media"><img src="assets/images/chefs/chef-marco-dsouza.jpg" alt="Portrait of Chef Marco D'Souza, Continental & Live Counters"></div>
           <div class="card-body">
             <h3>Chef Marco D'Souza</h3>
             <p style="margin-bottom:0;color:var(--primary);font-weight:600;font-size:0.88rem;">Continental & Live Counters</p>
           </div>
         </div>
-        <div class="card" data-animate>
-          <div class="card-media"><img src="https://placehold.co/400x460/f5efe2/7a1010?text=Chef+W&font=poppins" alt="Portrait of Chef Wei Zhang, Indo-Chinese Specialist"></div>
+        <div class="card chef-card" data-animate>
+          <div class="card-media"><img src="assets/images/chefs/chef-wei-zhang.jpg" alt="Portrait of Chef Wei Zhang, Indo-Chinese Specialist"></div>
           <div class="card-body">
             <h3>Chef Wei Zhang</h3>
             <p style="margin-bottom:0;color:var(--primary);font-weight:600;font-size:0.88rem;">Indo-Chinese Specialist</p>
@@ -235,7 +243,6 @@
             <li><a href="testimonials.html">Testimonials</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="faq.html">FAQs</a></li>
-            <li><a href="404.html">Privacy Policy</a></li>
             <li><a href="coming-soon.html">Seasonal Menus</a></li>
           </ul>
         </div>
